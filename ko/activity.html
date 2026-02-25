@@ -2,34 +2,114 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>활동 | polu</title>
+<title>김태승 | 폴루</title>
+
 <style>
-/* 동일 CSS */
-body {margin:0;background:#000;color:#fff;font-family:'Times New Roman', serif;overflow:hidden;}
-.header {position:fixed;top:20px;width:100%;text-align:center;}
-.name{font-size:32px;}
-.artist{font-size:16px;margin-top:4px;opacity:0.7;}
-.top-line{margin:20px auto 0;width:90%;border-top:1px solid #fff;}
-.content{position:absolute;top:140px;bottom:90px;left:0;right:0;overflow-y:auto;text-align:center;padding:40px;}
-.footer{position:fixed;bottom:20px;width:100%;text-align:center;}
-.bottom-line{width:90%;margin:0 auto 15px;border-top:1px solid #fff;}
-.menu{font-size:16px;}
-.menu a{color:#fff;text-decoration:none;display:inline-block;margin:0 22px;transition: transform 0.15s ease, opacity 0.15s ease;}
-.menu a:hover{transform:scale(0.92);opacity:0.7;}
-.menu a:active{transform:scale(0.85);}
+body {
+  margin: 0;
+  background: #111111;
+  color: #fff;
+  font-family: 'Times New Roman', serif;
+  overflow: hidden;
+}
+
+/* 상단 */
+.header {
+  position: fixed;
+  top: 20px; /* 더 좁게 */
+  width: 100%;
+  text-align: center;
+}
+
+.name {
+  font-size: 32px;
+}
+
+.artist {
+  font-size: 16px;
+  margin-top: 4px;
+  opacity: 0.7;
+}
+
+.location {
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.top-line {
+  margin: 20px auto 0 auto;
+  width: 90%;
+  border-top: 1px solid #fff; /* 실선 */
+}
+
+/* 중앙 스크롤 영역 */
+.content {
+  position: absolute;
+  top: 140px;   /* 위 영역 줄임 */
+  bottom: 90px; /* 아래 영역 줄임 */
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  text-align: center;
+  padding: 40px;
+}
+
+/* 하단 */
+.footer {
+  position: fixed;
+  bottom: 20px; /* 더 좁게 */
+  width: 100%;
+  text-align: center;
+}
+
+.bottom-line {
+  width: 90%;
+  margin: 0 auto 15px auto;
+  border-top: 1px solid #fff; /* 실선 */
+}
+
+.menu {
+  font-size: 16px;
+}
+
+.menu a {
+  margin: 0 16px; /* 링크 사이 간격 조절 */
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.menu a:hover {
+  transform: scale(0.92);  /* 살짝 작아짐 */
+  opacity: 0.7;
+}
+
+.menu a:active {
+  transform: scale(0.85);  /* 클릭 시 더 작아짐 */
+}
+
+.menu a:hover {
+  opacity: 0.6;
+}
 </style>
 </head>
+
 <body>
 
 <div class="header">
   <div class="name">김태승</div>
   <div class="artist">polu</div>
+  <div class="location">활동</div>
   <div class="top-line"></div>
 </div>
 
 <div class="content">
-  <h2>활동</h2>
-  <p>여기에 활동 내용이 들어갑니다.</p>
+  <p>여기에 소개글이나 작품 내용이 들어갑니다.</p>
+  <p style="margin-top:1200px;">스크롤 테스트</p>
 </div>
 
 <div class="footer">
