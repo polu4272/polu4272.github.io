@@ -7,45 +7,52 @@
 <style>
 body {
   background: #111111;
-  color: #fff;
-  font-family: 'Times New Roman', serif;
+  margin: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  font-family: 'Times New Roman', serif;
+  color: #fff;
 }
 
+/* 박스 */
 .container {
   border: 4px solid #fff;
-  padding: 70px 110px; /* 살짝만 키움 */
+  padding: 90px 140px; /* 전체 크기 살짝 더 키움 */
   text-align: center;
-  transform: scale(0.8);
-  opacity: 0;
-  animation: zoomIn 1.2s ease forwards;
+  transform: scale(0.7);
+  animation: boxZoom 0.8s ease-out forwards;
 }
 
-@keyframes zoomIn {
+/* 박스 커지는 애니메이션 */
+@keyframes boxZoom {
   to {
     transform: scale(1);
-    opacity: 1;
   }
 }
 
+/* 글자 공통 (처음엔 안 보임) */
+.fade-text {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 0.8s; /* 박스 끝난 후 시작 */
+}
+
+/* 개별 요소 */
 .title {
   font-size: 28px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 16px; /* 살짝 키움 */
-  color: #fff;     /* 완전 흰색 */
-  margin-bottom: 45px;
+  font-size: 18px;
+  margin-bottom: 50px;
 }
 
 .lang {
   display: block;
-  font-size: 34px;
+  font-size: 36px;
   margin: 18px 0;
   text-decoration: none;
   color: #fff;
@@ -55,6 +62,13 @@ body {
 .lang:hover {
   opacity: 0.5;
 }
+
+/* 페이드 인 */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 </style>
 </head>
 
@@ -62,11 +76,11 @@ body {
 
 <div class="container">
 
-  <div class="title">언어를 선택해주세요</div>
-  <div class="subtitle">Please select a language</div>
+  <div class="title fade-text">언어를 선택해주세요</div>
+  <div class="subtitle fade-text">Please select a language</div>
 
-  <a class="lang" href="/ko/">한국어</a>
-  <a class="lang" href="/en/">english</a>
+  <a class="lang fade-text" href="/ko/">한국어</a>
+  <a class="lang fade-text" href="/en/">english</a>
 
 </div>
 
