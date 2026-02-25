@@ -27,7 +27,13 @@ body {
 
 /* 박스 커지는 애니메이션 */
 @keyframes boxZoom {
-  to {
+  0% {
+    transform: scale(0.3);
+  }
+  80% {
+    transform: scale(1.02);
+  }
+  100% {
     transform: scale(1);
   }
 }
