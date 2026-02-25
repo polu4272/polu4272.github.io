@@ -7,46 +7,46 @@
 <style>
 body {
   margin: 0;
-  background: #111111;
+  background: #000;
   color: #fff;
   font-family: 'Times New Roman', serif;
-  overflow: hidden; /* 전체 스크롤 막기 */
+  overflow: hidden;
 }
 
-/* 상단 고정 영역 */
+/* 상단 */
 .header {
   position: fixed;
-  top: 40px;
+  top: 20px; /* 더 좁게 */
   width: 100%;
   text-align: center;
 }
 
 .name {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .artist {
-  font-size: 18px;
-  margin-top: 5px;
+  font-size: 16px;
+  margin-top: 4px;
   opacity: 0.7;
 }
 
 .location {
-  font-size: 18px;
-  margin-top: 5px;
+  font-size: 16px;
+  margin-top: 4px;
 }
 
 .top-line {
-  margin: 30px auto 0 auto;
-  width: 80%;
-  border-top: 2px dashed #fff;
+  margin: 20px auto 0 auto;
+  width: 90%;
+  border-top: 1px solid #fff; /* 실선 */
 }
 
 /* 중앙 스크롤 영역 */
 .content {
   position: absolute;
-  top: 200px;
-  bottom: 120px;
+  top: 140px;   /* 위 영역 줄임 */
+  bottom: 90px; /* 아래 영역 줄임 */
   left: 0;
   right: 0;
   overflow-y: auto;
@@ -54,23 +54,23 @@ body {
   padding: 40px;
 }
 
-/* 하단 고정 영역 */
+/* 하단 */
 .footer {
   position: fixed;
-  bottom: 40px;
+  bottom: 20px; /* 더 좁게 */
   width: 100%;
   text-align: center;
 }
 
 .bottom-line {
-  width: 80%;
-  margin: 0 auto 20px auto;
-  border-top: 2px dashed #fff;
+  width: 90%;
+  margin: 0 auto 15px auto;
+  border-top: 1px solid #fff; /* 실선 */
 }
 
 .menu {
-  font-size: 18px;
-  word-spacing: 20px;
+  font-size: 16px;
+  word-spacing: 18px;
 }
 
 .menu a {
@@ -95,8 +95,7 @@ body {
 
 <div class="content">
   <p>여기에 소개글이나 작품 내용이 들어갑니다.</p>
-  <p>스크롤 테스트용 텍스트</p>
-  <p style="margin-top:1000px;">아래까지 내려도 위아래는 고정됨</p>
+  <p style="margin-top:1200px;">스크롤 테스트</p>
 </div>
 
 <div class="footer">
