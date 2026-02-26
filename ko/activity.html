@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>김태승 | 폴루</title>
-
 <style>
-/* 배경 + 스플래터 */
+/* 배경 고정 + 스플래터 */
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>김태승 | 폴루</title>
+<style>
+/* 배경 고정 + 스플래터 */
 body {
   margin: 0;
-  background-color: #111111; /* 기본 단색 */
-  color: #fff;
-  font-family: 'Times New Roman', serif;
-  overflow: hidden;
-
-  /* 선 + 점 스플래터 패턴 */
+  height: 100vh;
+  background-color: #111111;
   background-image: 
     repeating-linear-gradient(
       45deg,
@@ -32,9 +34,12 @@ body {
     radial-gradient(circle at 30% 70%, rgba(0,191,255,0.05) 0, transparent 15px);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /* 배경 고정 */
+  font-family: 'Times New Roman', serif;
+  color: #fff;
 }
 
-/* 상단 */
+/* 상단 고정 */
 .header {
   position: fixed;
   top: 20px;
@@ -52,11 +57,11 @@ body {
   border-top: 1px solid #fff;
 }
 
-/* 중앙 스크롤 영역 */
+/* 중앙 콘텐츠 영역 스크롤 */
 .content {
   position: absolute;
-  top: 140px;
-  bottom: 90px;
+  top: 140px;   /* header 아래 */
+  bottom: 90px; /* footer 위 */
   left: 0;
   right: 0;
   overflow-y: auto;
@@ -64,7 +69,7 @@ body {
   padding: 40px;
 }
 
-/* 하단 */
+/* 하단 고정 메뉴 */
 .footer {
   position: fixed;
   bottom: 20px;
@@ -95,7 +100,95 @@ body {
 
 </style>
 </head>
+<body>
 
+<div class="header">
+  <div class="name">김태승</div>
+  <div class="artist">폴루</div>
+  <div class="location">활동</div>
+  <div class="top-line"></div>
+</div>
+
+<div class="content">
+  <p>여기에 소개글이나 작품 내용이 들어갑니다.</p>
+  <p style="margin-top:1000px;">스크롤 테스트 끝</p>
+</div>
+
+<div class="footer">
+  <div class="bottom-line"></div>
+  <div class="menu">
+    <a href="index.html">메인</a>
+    <a href="discography.html">음반&nbsp;&nbsp;목록</a>
+    <a href="activity.html">활동</a>
+    <a href="shop.html">상점</a>
+    <a href="contact.html">문의</a>
+  </div>
+</div>
+
+</body>
+</html>
+
+/* 상단 고정 */
+.header {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.name { font-size: 32px; }
+.artist { font-size: 16px; margin-top: 4px; opacity: 0.7; }
+.location { font-size: 16px; margin-top: 4px; }
+
+.top-line {
+  margin: 20px auto 0 auto;
+  width: 90%;
+  border-top: 1px solid #fff;
+}
+
+/* 중앙 콘텐츠 영역 스크롤 */
+.content {
+  position: absolute;
+  top: 140px;   /* header 아래 */
+  bottom: 90px; /* footer 위 */
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  text-align: center;
+  padding: 40px;
+}
+
+/* 하단 고정 메뉴 */
+.footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom-line {
+  width: 90%;
+  margin: 0 auto 15px auto;
+  border-top: 1px solid #fff;
+}
+
+.menu {
+  font-size: 16px;
+}
+
+.menu a {
+  margin: 0 16px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.menu a:hover { transform: scale(0.92); opacity: 0.6; }
+.menu a:active { transform: scale(0.85); }
+
+</style>
+</head>
 <body>
 
 <div class="header">
@@ -107,7 +200,7 @@ body {
 
 <div class="content">
   <p>스크롤 테스트</p>
-  <p style="margin-top:1200px;">스크롤 테스트</p>
+  <p style="margin-top:1000px;">스크롤 테스트</p>
 </div>
 
 <div class="footer">
