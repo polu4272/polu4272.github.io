@@ -14,8 +14,10 @@
 /* 배경 고정 + 스플래터 */
 body {
   margin: 0;
-  height: 100vh;
+  height: 200vh; /* 테스트용 */
   background-color: #111111;
+
+  /* LP 스플래터 패턴 */
   background-image: 
     repeating-linear-gradient(
       45deg,
@@ -32,11 +34,10 @@ body {
       transparent 18px
     ),
     radial-gradient(circle at 30% 70%, rgba(0,191,255,0.05) 0, transparent 15px);
+
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* 배경 고정 */
-  font-family: 'Times New Roman', serif;
-  color: #fff;
+  background-attachment: scroll; /* 배경 스크롤 따라 움직임 */
 }
 
 /* 상단 고정 */
